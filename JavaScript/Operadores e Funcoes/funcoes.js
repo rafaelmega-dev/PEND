@@ -19,7 +19,16 @@ let peso = 70;
 function calcularIMC(peso, altura) {
     return peso / (altura * altura);
 }
-console.log(calcularIMC(peso, altura));
+imc = calcularIMC(peso, altura);
+if (imc < 18.5) {
+    console.log("Abaixo do peso");
+} else if (imc >= 18.5 && imc < 25) {
+    console.log("Peso normal");
+} else if (imc >= 25 && imc < 30) {
+    console.log("Sobrepeso");
+} else {
+    console.log("Obesidade");
+}
 
 console.log("==========Atividade 8:==========");
 let numero4 = 8;
