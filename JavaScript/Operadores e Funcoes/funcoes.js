@@ -63,3 +63,5 @@ function verificarPrimo(numero) {
 console.log(numero4 + " " + (verificarPrimo(numero4))); 
 console.log(numero4 + " é um número " + (negativoOuPositivo(numero4)));
 console.log(numero4 + " é um número " + (imparOuPar(numero4)));
+
+
