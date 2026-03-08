@@ -45,6 +45,7 @@ botaoContCliques.addEventListener("click", function() {
 
 
 //Atividade 5-Criar item da lista
+<<<<<<< HEAD
 
 let botaoListaAdd = document.getElementById("botaoListaAdd");
 let inputItemLista = document.getElementById("inputItemLista")
@@ -56,3 +57,5 @@ botaoListaAdd.addEventListener("click", function() {
 });
 
 
+=======
+>>>>>>> 2008b9968d33c26f09e93e1c819fa080318be38a
