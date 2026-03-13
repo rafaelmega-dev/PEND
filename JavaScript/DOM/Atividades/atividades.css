@@ -1,0 +1,235 @@
+.oculto {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* ----- Main Container ----- */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* ----- Activity Card Style ----- */
+h2 {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    border-bottom: none;
+}
+
+/* Style hr to be subtle */
+hr {
+    border: none;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 30px 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* ----- Headings ----- */
+h3 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* ----- Buttons ----- */
+button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin: 4px;
+}
+
+#botaoAzul {
+    background-color: #4a90d9;
+    color: white;
+}
+
+#botaoAzul:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
+}
+
+#botaoVermelho {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#botaoVermelho:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+#botaoOcultar {
+    background-color: #9b59b6;
+    color: white;
+}
+
+#botaoOcultar:hover {
+    background-color: #8e44ad;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(155, 89, 182, 0.3);
+}
+
+#botaoContCliques {
+    background-color: #27ae60;
+    color: white;
+}
+
+#botaoContCliques:hover {
+    background-color: #219a52;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+#botaoListaAdd {
+    background-color: #e67e22;
+    color: white;
+}
+
+#botaoListaAdd:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+#botaoEnviarNome {
+    background-color: #1abc9c;
+    color: white;
+}
+
+#botaoEnviarNome:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 188, 156, 0.3);
+}
+
+/* ----- Input Fields ----- */
+input[type="text"] {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    margin-right: 8px;
+}
+
+input[type="text"]:focus {
+    border-color: #4a90d9;
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.15);
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+/* ----- Paragraphs ----- */
+p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+/* Specific paragraph styles */
+#paragContCarac,
+#paragContCliques,
+#paragVerificador {
+    font-weight: 500;
+    color: #444;
+}
+
+#textoCor,
+#textoEscondido {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 0;
+}
+
+/* ----- List Styles ----- */
+ul {
+    list-style-type: none;
+    margin-top: 15px;
+    padding: 0;
+    max-width: 400px;
+}
+
+li {
+    padding: 10px 16px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #fff5f5;
+    border-color: #ffcccc;
+    color: #c0392b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+
+/* ----- Responsive Design ----- */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    h2 {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+    
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+

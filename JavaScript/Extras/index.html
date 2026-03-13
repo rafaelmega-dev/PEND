@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW | The Ultimate Driving Machine</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=BMW+Type+Next:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- BMW Logo -->
+            <a href="#home" class="logo">
+                <span class="logo-text">BMW</span>
+                <span class="logo-tagline">The Ultimate Driving Machine</span>
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#history" class="nav-link">History</a></li>
+                <li><a href="#facts" class="nav-link">Facts</a></li>
+                <li><a href="#models" class="nav-link">Models</a></li>
+                <li><a href="#prices" class="nav-link">Prices</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW Logo" class="bmw-logo-img">
+            </div>
+            <h1 class="hero-title">THE ULTIMATE<br>DRIVING MACHINE</h1>
+            <p class="hero-slogan">Innovation through tradition. Performance through passion.</p>
+            <a href="#models" class="btn btn-primary">Explore Models</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="section history-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Legacy</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">A century of automotive excellence</p>
+            </div>
+            
+            <div class="history-content">
+                <div class="history-timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item" data-year="1916">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>The Beginning</h3>
+                            <p>Bayerische Motoren Werke (BMW) was founded in Munich, Germany. Originally producing aircraft engines for World War I.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item" data-year="1923">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>First Motorcycle</h3>
+                            <p>BMW introduced the R32, the first motorcycle produced by BMW, establishing the company's reputation for engineering excellence.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item" data-year="1928">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Automotive Entry</h3>
+                            <p>BMW began automobile production after acquiring the Eisenach plant, launching the Dixi, the first BMW car.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item" data-year="1959">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>The New Beginning</h3>
+                            <p>The BMW 700 marked a turning point, saving the company from financial crisis and establishing the sporty BMW identity.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 5 -->
+                    <div class="timeline-item" data-year="1972">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>BMW M Founded</h3>
+                            <p>BMW M (Motorsport) was established, creating high-performance vehicles that would become legendary.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 6 -->
+                    <div class="timeline-item" data-year="2024">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Electric Future</h3>
+                            <p>BMW leads the industry in electric mobility with the i4, iX, and upcoming Neue Klasse platform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facts & Curiosities Section -->
+    <section id="facts" class="section facts-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Facts & Curiosities</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Discover what makes BMW unique</p>
+            </div>
+            
+            <div class="facts-grid">
+                <!-- Fact Card 1 -->
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Aviation Roots</h3>
+                    <p>BMW started as an aircraft engine manufacturer. The blue and white logo represents a spinning propeller against the Bavarian sky.</p>
+                </div>
+                
+                <!-- Fact Card 2 -->
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Power Unit Innovation</h3>
+                    <p>BMW is one of the few manufacturers that produces engines, transmissions, and electronics all in-house.</p>
+                </div>
+                
+                <!-- Fact Card 3 -->
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <h3>Racing Heritage</h3>
+                    <p>BMW has won the 24 Hours of Le Mans, DTM championships, and numerous Formula 1 races throughout history.</p>
+                </div>
+                
+                <!-- Fact Card 4 -->
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>BMW was the first German car manufacturer to commit to sustainable production, with plans for carbon neutrality by 2050.</p>
+                </div>
+                
+                <!-- Fact Card 5 -->
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>The "Ultimate" Promise</h3>
+                    <p>BMW's slogan "The Ultimate Driving Machine" has been used since 1970 and has become one of the most iconic automotive taglines.</p>
+                </div>
+                
+                <!-- Fact Card 6 -->
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Engine Philosophy</h3>
+                    <p>BMW's iconic straight-six engines are renowned for smoothness and performance, a philosophy dating back to 1933.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Section -->
+    <section id="models" class="section models-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Models</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Experience the range of BMW excellence</p>
+            </div>
+            
+            <div class="models-grid">
+                <!-- Model Card 1 -->
+                <div class="model-card" data-model="m4">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&q=80" alt="BMW M4">
+                        <div class="model-overlay">
+                            <button class="btn btn-secondary view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>BMW M4 Competition</h3>
+                        <p class="model-tag">Performance Coupe</p>
+                        <div class="model-specs">
+                            <span><i class="fas fa-horse"></i> 503 HP</span>
+                            <span><i class="fas fa-bolt"></i> 3.4s 0-60</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model Card 2 -->
+                <div class="model-card" data-model="x5">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1556189250-72ba954e96b5?w=600&q=80" alt="BMW X5">
+                        <div class="model-overlay">
+                            <button class="btn btn-secondary view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>BMW X5 xDrive40i</h3>
+                        <p class="model-tag">Luxury SAV</p>
+                        <div class="model-specs">
+                            <span><i class="fas fa-horse"></i> 335 HP</span>
+                            <span><i class="fas fa-bolt"></i> 5.3s 0-60</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model Card 3 -->
+                <div class="model-card" data-model="7">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80" alt="BMW 7 Series">
+                        <div class="model-overlay">
+                            <button class="btn btn-secondary view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>BMW 760i xDrive</h3>
+                        <p class="model-tag">Executive Sedan</p>
+                        <div class="model-specs">
+                            <span><i class="fas fa-horse"></i> 536 HP</span>
+                            <span><i class="fas fa-bolt"></i> 4.2s 0-60</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model Card 4 -->
+                <div class="model-card" data-model="i4">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&q=80" alt="BMW i4">
+                        <div class="model-overlay">
+                            <button class="btn btn-secondary view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>BMW i4 M50</h3>
+                        <p class="model-tag">Electric Gran Coupe</p>
+                        <div class="model-specs">
+                            <span><i class="fas fa-horse"></i> 536 HP</span>
+                            <span><i class="fas fa-bolt"></i> 3.7s 0-60</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model Card 5 -->
+                <div class="model-card" data-model="ix">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1637699807183-f4d9b1b18403?w=600&q=80" alt="BMW iX">
+                        <div class="model-overlay">
+                            <button class="btn btn-secondary view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>BMW iX xDrive50</h3>
+                        <p class="model-tag">Electric SAV</p>
+                        <div class="model-specs">
+                            <span><i class="fas fa-horse"></i> 516 HP</span>
+                            <span><i class="fas fa-bolt"></i> 4.4s 0-60</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model Card 6 -->
+                <div class="model-card" data-model="m3">
+                    <div class="model-image">
+                        <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=600&q=80" alt="BMW M3">
+                        <div class="model-overlay">
+                            <button class="btn btn-secondary view-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>BMW M3 Competition</h3>
+                        <p class="model-tag">Performance Sedan</p>
+                        <div class="model-specs">
+                            <span><i class="fas fa-horse"></i> 503 HP</span>
+                            <span><i class="fas fa-bolt"></i> 3.4s 0-60</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prices Section -->
+    <section id="prices" class="section prices-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Estimated Prices</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">MSRP (Manufacturer's Suggested Retail Price) in USD</p>
+            </div>
+            
+            <div class="prices-table-container">
+                <table class="prices-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Variant</th>
+                            <th>Engine</th>
+                            <th>Power</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="model-name">BMW 3 Series</td>
+                            <td>330i Sport Line</td>
+                            <td>2.0L Turbo I4</td>
+                            <td>255 HP</td>
+                            <td class="price">$47,300</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">BMW 3 Series</td>
+                            <td>M340i xDrive</td>
+                            <td>3.0L Turbo I6</td>
+                            <td>382 HP</td>
+                            <td class="price">$61,400</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">BMW 5 Series</td>
+                            <td>530i</td>
+                            <td>2.0L Turbo I4</td>
+                            <td>255 HP</td>
+                            <td class="price">$57,400</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">BMW 5 Series</td>
+                            <td>M550i xDrive</td>
+                            <td>4.4L Twin-Turbo V8</td>
+                            <td>523 HP</td>
+                            <td class="price">$84,100</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">BMW X3</td>
+                            <td>xDrive30i</td>
+                            <td>2.0L Turbo I4</td>
+                            <td>248 HP</td>
+                            <td class="price">$47,600</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">BMW X5</td>
+                            <td>xDrive40i</td>
+                            <td>3.0L Turbo I6</td>
+                            <td>335 HP</td>
+                            <td class="price">$65,400</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">BMW X7</td>
+                            <td>xDrive40i</td>
+                            <td>3.0L Turbo I6</td>
+                            <td>335 HP</td>
+                            <td class="price">$78,300</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">BMW M4</td>
+                            <td>Competition</td>
+                            <td>3.0L Twin-Turbo I6</td>
+                            <td>503 HP</td>
+                            <td class="price">$82,900</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">BMW i4</td>
+                            <td>eDrive35</td>
+                            <td>Electric</td>
+                            <td>282 HP</td>
+                            <td class="price">$52,200</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">BMW iX</td>
+                            <td>xDrive50</td>
+                            <td>Electric Dual Motor</td>
+                            <td>516 HP</td>
+                            <td class="price">$87,100</td>
+                            <td><button class="btn btn-small inquire-btn">Inquire</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="price-disclaimer">* Prices shown are MSRP and may vary by location, options, and dealer. Prices do not include destination & handling fee ($995), taxes, registration, and other charges.</p>
+        </div>
+    </section>
+
+    <!-- Contact/Footer Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <div class="section-divider"></div>
+                        <p class="section-subtitle">Experience BMW in person</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>BMW Headquarters</h4>
+                                <p>Petuelring 130, 80809 Munich, Germany</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Customer Service</h4>
+                                <p>1-800-BMW-USA (1-800-269-8721)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contact@bmw.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="newsletter-form">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to receive the latest news about BMW models and events.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">BMW</span>
+                    <p>The Ultimate Driving Machine</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#models">Models</a></li>
+                        <li><a href="#prices">Prices</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/bmw" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/bmw" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/bmw" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/bmw" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://linkedin.com/company/bmw" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 BMW AG. All rights reserved. This is a demonstration website.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Imprint</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Car Details -->
+    <div class="modal" id="car-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-title">Model Name</h2>
+                <div class="modal-specs">
+                    <div class="spec-item">
+                        <i class="fas fa-horse"></i>
+                        <span id="modal-power">0 HP</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span id="modal-speed">0-60: 0s</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <span id="modal-engine">Engine</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-cog"></i>
+                        <span id="modal-transmission">Transmission</span>
+                    </div>
+                </div>
+                <p id="modal-description">Description goes here...</p>
+                <button class="btn btn-primary" id="modal-cta">Configure Yours</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>
