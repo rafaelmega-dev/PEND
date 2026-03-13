@@ -85,10 +85,3 @@ botaoEnviarNome.addEventListener("click", function() {
         document.getElementById("paragVerificador").appendChild(paragVerifica);
     }
 })
-
-
-
-
-
-
-
