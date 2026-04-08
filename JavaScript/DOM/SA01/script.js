@@ -1,33 +1,41 @@
-//Regex para validação da senha
+//Regex para validações
 let mascaraSenhaTamanho = /^.{8,}$/;
 let mascaraSenhaLetraMinu = /[a-z]/;
 let mascaraSenhaLetraMaiu = /[A-Z]/;
 let mascaraSenhaNumero = /\d/;
-
-//Regex para validação do nome
 let mascaraNome = /^[a-zA-Z\s]+$/;
-
-//Regex para validação do telefone
 let mascaraTelefone = /^\(\d{2}\) \d{5}-\d{4}$/;
-
-//Regex para validação do email
 let mascaraEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+let mascaraCep = /^\d{5}-?\d{3}$/;
+let mascaraRua = /^[a-zA-Z0-9\s,.-]+$/;
+let mascaraNumero = /^\d+$/;
+let mascaraComplemento = /^[a-zA-Z0-9\s,.-]*$/;
 
 //Botão de cadastro
 let botao = document.getElementById("cadastrar");
+let botaoAddEndereco = document.getElementById("cadastrarEndereco");
 
 //Mensagem de cadastro
-let mensagem = document.getElementById("mensagem");
+let mensagemEmail = document.getElementById("mensagemEmail");
 let mensagemSenha = document.getElementById("mensagemSenha");
+let mensagemTelefone = document.getElementById("mensagemTelefone");
+let mensagemNome = document.getElementById("mensagemNome");
+let mensagemIndex = document.getElementById("mensagemIndex");
+let mensagemEndereco = document.getElementById("mensagemEndereco");
+let mensagemCep = document.getElementById("mensagemCep");
+let mensagemRua = document.getElementById("mensagemRua");
+let mensagemNumero = document.getElementById("mensagemNumero");
+let mensagemComplemento = document.getElementById("mensagemComplemento");
 
-//Inputs do formulário
-let nome = document.getElementById("nome");
-let telefone = document.getElementById("telefone");
-let email = document.getElementById("email");
-let senha = document.getElementById("senha");
-let endereco = document.getElementById("endereco");
+// Elementos do formulário de endereço
+let cep = document.getElementById("cep"); 
+let rua = document.getElementById("rua");
+let numero = document.getElementById("numero"); 
+let complemento = document.getElementById("complemento");
+let listaEnderecos = document.getElementById("listaEnderecos"); 
 
+//Guardando os endereços em um array
+let enderecos = [];
 
 document.getElementById("senha").addEventListener("keyup", function() {
         if (!mascaraSenhaTamanho.test(senha.value)) {
@@ -43,25 +51,93 @@ document.getElementById("senha").addEventListener("keyup", function() {
     }
 });
 
-document.getELementkById("email").addEventListener("keyup", function() {
-    
+document.getElementById("email").addEventListener("keyup", function() {
+    if (!mascaraEmail.test(email.value)) {
+        mensagemEmail.textContent = "Email inválido. Use um formato válido, como exemplo@teste.com";
+    } else {
+        mensagemEmail.textContent = "";
+    }
+});
+
+document.getElementById("telefone").addEventListener("keyup", function() {
+    if (!mascaraTelefone.test(telefone.value)) {
+        mensagemTelefone.textContent = "Telefone inválido. Use o formato (xx) xxxxx-xxxx.";
+    } else {
+        mensagemTelefone.textContent = "";
+    }
+});   
+
+document.getElementById("nome").addEventListener("keyup", function() {
+    if (!mascaraNome.test(nome.value)) {
+        mensagemNome.textContent = "Nome inválido. Use apenas letras e espaços.";
+    } else {
+        mensagemNome.textContent = "";
+    }
+});
+
+document.getElementById("cep").addEventListener("keyup",
+function() {
+    if (!mascaraCep.test(cep.value)) {
+        mensagemCep.textContent = "CEP inválido. Use o formato xxxxx-xxx.";
+    } else {
+        mensagemCep.textContent = "";
+    }
+});
+
+document.getElementById("rua").addEventListener("keyup", function() {
+    if (!mascaraRua.test(rua.value)) {
+        mensagemRua.textContent = "Rua inválida. Use apenas letras, números e espaços.";
+    } else {
+        mensagemRua.textContent = "";
+    }
+});
+
+document.getElementById("numero").addEventListener("keyup", function() {
+    if (!mascaraNumero.test(numero.value)) {
+        mensagemNumero.textContent = "Número inválido. Use apenas números.";
+    } else {
+        mensagemNumero.textContent = "";
+    }
+});
+
+document.getElementById("complemento").addEventListener("keyup", 
+function() {
+    if(!mascaraComplemento.test(complemento.value)) {
+        mensagemComplemento.textContent = "Complemento inválido. Use apenas letras, números e espaços.";
+    } else {
+        mensagemComplemento.textContent = "";
+    }
+});
+
 
 function validarFormulario() {
     if (nome.value.trim() === "" || telefone.value.trim() === "" || email.value.trim() === "" || senha.value.trim() === "") {
-        mensagem.textContent = "Por favor, preencha todos os campos.";
-    } else if (!mascaraNome.test(nome.value)) {
-        mensagem.textContent = "Nome inválido. Use apenas letras e espaços.";
-    } else if (!mascaraTelefone.test(telefone.value)) {
-        mensagem.textContent = "Telefone inválido. Use o formato (xx) xxxxx-xxxx.";
-    } else if (!mascaraEmail.test(email.value)) {
-        mensagem.textContent = "Email inválido. Use um formato válido, como seuemail@exemplo.com";
-    } else if (mensagemSenha.textContent === "Senha fraca. Use pelo menos 8 caracteres, incluindo letras e números.") {
-        mensagem.textContent = "Senha inválida";
+        mensagemIndex.textContent = "Por favor, preencha todos os campos.";
+    } else if (mascaraNome.test(nome.value) && mascaraTelefone.test(telefone.value) && mascaraEmail.test(email.value) && mascaraSenhaTamanho.test(senha.value) && mascaraSenhaLetraMinu.test(senha.value) && mascaraSenhaLetraMaiu.test(senha.value) && mascaraSenhaNumero.test(senha.value)) { 
+        mensagemIndex.textContent = "Cadastro realizado com sucesso!";
     } else {
-        mensagem.textContent = "Cadastro realizado com sucesso!";
+        mensagemIndex.textContent = "Por favor, corrija os erros nos campos antes de cadastrar.";
     }
 }
 
 botao.addEventListener("click", function() {
-    validarFormulario(nome, telefone, email);
+    validarFormulario();
+});
+
+function validarFormularioEndereco() {
+    if (cep.value.trim() === "" || rua.value.trim() === "" || numero.value.trim() === "" || complemento.value.trim() === "") {
+        mensagemEndereco.textContent = "Por favor, preencha todos os campos.";
+    } else if (mascaraCep.test(cep.value) && mascaraRua.test(rua.value) && mascaraNumero.test(numero.value) && mascaraComplemento.test(complemento.value)){ 
+        mensagemEndereco.textContent = "Endereço cadastrado com sucesso!";
+    } else {
+        mensagemEndereco.textContent = "Por favor, corrija os erros nos campos antes de cadastrar.";
+
+    }
+}
+
+botaoAddEndereco.addEventListener("click", function() {
+    validarFormularioEndereco();
+    if (mensagemEndereco.textContent === "Endereço cadastrado com sucesso!") {
+
+    }
 });
