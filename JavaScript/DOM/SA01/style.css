@@ -1,6 +1,8 @@
 /* ============================================
    VARIÁVEIS DE CORES E ESPAÇAMENTO
    ============================================ */
+
+
 :root {
     --color-primary: #2980B9;
     --color-primary-dark: #1E5F8E;
@@ -187,6 +189,7 @@ body {
    ============================================ */
 .input-wrapper {
     margin-bottom: var(--spacing-md);
+    position: relative;
 }
 
 .input-wrapper label {
@@ -208,7 +211,8 @@ body {
     background-color: var(--color-bg-light);
     color: var(--color-text);
     transition: var(--transition);
-    outline: none;
+    outline: 0;
+    
 }
 
 .input-wrapper input::placeholder {
@@ -244,6 +248,7 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
 
 /* ============================================
    CHECKBOX
@@ -468,4 +473,11 @@ body {
         width: 200px;
         height: 200px;
     }
+}
+.icone {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    top: 38%;
 }

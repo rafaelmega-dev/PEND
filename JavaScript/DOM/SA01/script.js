@@ -213,3 +213,17 @@ botaoAddEndereco.addEventListener("click", function() {
 botao.addEventListener("click", function() {
     validarFormulario();
 });
+
+let input = document.querySelector("#senha");
+let botaoSenha = document.querySelector("#botaoSenha");
+
+botaoSenha.addEventListener("click",function() {
+    if (input.type === "password") {
+        input.setAttribute('type','text');
+        botaoSenha.classList.replace('bi-eye-fill','bi-eye-slash-fill');
+    } else {
+        input.setAttribute('type','password');
+        botaoSenha.classList.replace('bi-eye-slash-fill','bi-eye-fill');
+
+    }
+});
