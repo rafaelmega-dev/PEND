@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+   
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    display: flex;
+}
+li {
+    position: relative;
+}
+ a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #ff0000;
+}
+
+.sub {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    min-width: 150px;
+}
+
+.linksub {
+    padding: 10px;
+}
+
+li:hover > ul {
+    display: block;
+}
+#img_principal {
+    width: 1440px;
+    height: auto;
+    display: block;
+    margin: auto;
+    box-shadow: black 10px 10px 40px;
+    border: rgb(255, 255, 255) 3px solid;  
+}
+h1 {
+    margin-left: 620px;
+    width: 250px;
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    color: #009c10;
+    text-shadow: 2px 2px 6px #000000;  
+}
+body {
+    background-image: url(assets/terra.jpg);
+}
+h3 {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 1px 6px #000000;  
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+h2 {
+    padding-left: 50px;
+    text-align: left;
+    font-family: 'Arial Black', sans-serif;
+    color: rgb(237, 237, 185);
+    text-shadow: 2px 2px 6px #000000;  
+}
+#img_minigame {
+    width: 600px;
+    height: auto;
+    margin-left: 100px;
+    align-items: left;
+    box-shadow: black 10px 10px 40px;
+    border: rgb(255, 255, 255) 3px solid;
+}
+#minigames {
+   display: flex;
+}
+#text_minigame {
+    margin:auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    padding: 30px 30px 30px 30px; ;
+    background-color: #000000;
+    border: white 3px solid;
+    border-radius: 50px;
+    width: 400px;
+}
+#img_minigame1 {
+    width: 600px;
+    height: auto;
+    margin-right: 100px;
+    align-items: right;
+    box-shadow: black 10px 10px 40px;
+    border: rgb(255, 255, 255) 3px solid;
+}
+footer {
+    text-align: center;
+    color: #ffffff; 
+    padding: 10px 640px 10px 640px;
+    background-color: #333;
+    bottom: 0;
+    position: fixed;
+    font-weight: normal;
+}
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    display: flex;
+    position: fixed;
+    padding-right: 1300px;
+}
+h4 { 
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    color: #009c10;
+    text-shadow: 5px 5px 10px #000000;  
+    font-size: 100px;
+    margin-top: -35px;
+}
+#subtitulo {
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    color: rgb(237, 237, 185);
+    text-shadow: 2px 2px 6px #000000;  
+    font-size: 40px;
+    margin-top: -20px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    h4 {
+        color: blue;
+    }
+    #subtitulo {
+        color: red;
+    }
+    h3 {
+        color: yellow;
+    }
+    h1 {
+        color: purple;
+    }
+    
+}
+
+/*CELULARES*/
+@media (max-width: 767px) {
+    h4 {
+        color: gray;
+    }
+    #subtitulo {
+        color: pink;
+    }
+    h3 {
+        color: rgb(0, 77, 128);
+    }
+    h4 {
+        color: orangered;
+    }
+}
+@media (max-width: 1400px) {
+    #img_principal {
+        width: 100%;
+        height: auto;
+    }
+    h1 {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    #text_minigame {
+        width: 100%;
+        height: auto;
+    }
+    h4 {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
