@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: "Jokerman", fantasy;
+}
+
+h2 {
+    font-family: "Chiller", cursive;
+}
+
+.topo {
+    background-color: gray;
+    padding: 10px;
+}
+
+.menu a {
+    margin-right: 20px;
+    color: blue;
+}
+
+.conteudo {
+    width: 1200px;
+    margin: auto;
+}
+
+.noticia {
+    margin-top: 20px;
+}
+
+.noticia img {
+    width: 800px;
+}
+
+.rodape {
+    margin-top: 30px;
+    background-color: gray;
+    padding: 20px;
+}
