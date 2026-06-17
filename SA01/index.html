@@ -11,86 +11,116 @@
 <body>
     <header class="topo">
         <h1>NewsToday</h1>
+        <p>As últimas notícias do Brasil e do mundo</p>
+    </header>
 
-        <div class="menu">
-            <a href="#inicio">Início</a>
-            <a href="#tecnologia">Tecnologia</a>
-            <a href="#esportes">Esportes</a>
-            <a href="#economia">Economia</a>
-            <a href="#contato">Contato</a>
-        </div>
+    <nav class="menu-nav">
+    <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+    
+    <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="tecnologia.html">Tecnologia</a></li>
+        <li><a href="esportes.html">Esportes</a></li>
+        <li><a href="economia.html">Economia</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+</nav>
 
-    <nav class="conteudo">
+    <section class="destaque artigo-noticia" data-categoria="esportes">
+        <h2>Notícia em destaque</h2>
 
-        <div class="noticia">
-            <img src="assets/itau.webp">
+        <div class="noticia-destaque">
+            <img src="assets/selecao-brasileira.webp" alt="Neymar na seleção">
 
-            <h2>Ações do Itaú crescem mais de 50% em menos de 1 ano</h2>
+            <h2>Neymar tem semana decisiva e seleção quer tê-lo em campo até quarta-feira</h2>
 
             <p>
-                O banco Itaú tem apresentado um crescimento significativo em suas ações, com um aumento de mais de 50% em menos de um ano, impulsionado por estratégias eficazes e resultados financeiros sólidos.
+                A ideia dentro da seleção brasileira é ter Neymar de volta aos treinos dentro de campo entre esta segunda-feira e a quarta-feira. Como tem sido rotina, o camisa 10 será avaliado diariamente na definição dos próximos passos na fase final do tratamento da lesão na panturrilha direita.
+            </p>
+        </div>
+    </section>
+
+    <section class="noticias">
+        
+        <div class="noticia artigo-noticia" data-categoria="economia">
+            <img src="assets/titulos.webp" alt="Gráficos econômicos">
+            <h2>Preços dos títulos da zona do euro registram maior alta desde fevereiro</h2>
+            <p>
+                O preço do petróleo caiu para menos de US$ 80 por barril, uma queda de 10% desde segunda-feira, após os Estados Unidos e o Irã anunciarem que haviam chegado a um acordo sobre a estrutura de um acordo de paz. Como resultado, os rendimentos despencaram.
             </p>
         </div>
 
-        <div class="noticia">
-            <img
-                src="https://s3.sa-east-1.amazonaws.com/cdn.nasajon/wp-content/uploads/2022/08/16161618/A-influencia-da-tecnologia-no-comercio.png">
-
+        <div class="noticia artigo-noticia" data-categoria="tecnologia">
+            <img src="https://s3.sa-east-1.amazonaws.com/cdn.nasajon/wp-content/uploads/2022/08/16161618/A-influencia-da-tecnologia-no-comercio.png" alt="Tecnologia">
             <h2>Pesquisa aponta crescimento do setor digital</h2>
-
             <p>
-                O setor apresentou crescimento significativo nos últimos anos.
+                O setor apresentou crescimento significativo nos últimos anos, impulsionado pelas novas ferramentas de inteligência artificial.
             </p>
         </div>
 
-        <div class="noticia">
-            <img src="https://i0.wp.com/nectar.empregare.com/wp-content/uploads/2021/11/1-1.jpg?resize=800%2C534&ssl=1">
-
+        <div class="noticia artigo-noticia" data-categoria="economia">
+            <img src="https://i0.wp.com/nectar.empregare.com/wp-content/uploads/2021/11/1-1.jpg?resize=800%2C534&ssl=1" alt="Mercado de trabalho">
             <h2>Mercado de trabalho exige novas competências</h2>
-
             <p>
-                Profissionais buscam atualização constante para acompanhar as mudanças.
+                Profissionais buscam atualização constante para acompanhar as mudanças econômicas e estruturais do mercado global.
             </p>
         </div>
 
-        <div class="noticia">
-            <img
-                src="assets/selecao-brasileira.webp">
-
-            <h2>Confira agora os jogadores titulares da estria do Brasil na copa</h2>
-
-            <p>
-                A seleção brasileira de futebol anunciou os jogadores titulares para a estreia na Copa do Mundo, gerando grande expectativa entre os fãs e especialistas do esporte.
-            </p>
-                
-        </div>
-
-        <div class="noticia">
-            <img
-                src="assets/bitcoin.avif">
-
+        <div class="noticia artigo-noticia" data-categoria="tecnologia">
+            <img src="assets/bitcoin.avif" alt="Bitcoin">
             <h2>Bitcoin em queda desde o final de 2025</h2>
-
             <p>
                 O bitcoin tem enfrentado uma queda significativa desde o final de 2025, com especialistas apontando para uma série de fatores que contribuíram para essa tendência negativa.
             </p>
         </div>
 
-        <div class="noticia">
-            <img
-                src="assets/copa-do-mundo.webp">
-
+        <div class="noticia artigo-noticia" data-categoria="esportes">
+            <img src="assets/copa-do-mundo.webp" alt="Taça da copa">
             <h2>Início da copa do mundo</h2>
-
             <p>
                 Conheça os detalhes da copa do mundo e as expectativas para o evento esportivo mais aguardado do ano.
             </p>
         </div>
-    </nav>
+    </section>
 
-    <div class="rodape">
-        NewsToday © 2026
-    </div>
+    <footer id="contato" class="rodape">
+        <div class="rodape-container">
+            <div class="rodape-coluna">
+                <h3>NewsToday</h3>
+                <p>O seu portal diário de informações com credibilidade e agilidade. Acompanhe as novidades do Brasil e do mundo.</p>
+            </div>
+            
+            <div class="rodape-coluna">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tecnologia.html">Tecnologia</a></li>
+                    <li><a href="esportes.html">Esportes</a></li>
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Siga-nos</h3>
+                <div class="redes-sociais">
+                    <div class="icones"></div>
+                    <a href="#">
+                        <img src="assets/facebook.png" alt="Facebook" class="icone-facebook">
+                    </a>
+                    <a href="#">
+                        <img src="assets/whatsapp.png" alt="WhatsApp" class="icone-whatsapp">
+                    </a>
+                    <a href="#">
+                        <img src="assets/instagram.svg" alt="Instagram" class="icone-instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="rodape-direitos">
+            <p>NewsToday © 2026 - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
 </body>
-
-</html>

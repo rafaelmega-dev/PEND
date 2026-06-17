@@ -1,0 +1,87 @@
+1. Melhorias Feitas no Site Base
+Comparado a um site estático e básico, este projeto implementou melhorias de nível profissional:
+
+Menu Fixo (Sticky): O menu superior agora acompanha o usuário enquanto ele rola a página (position: sticky), facilitando a navegação sem precisar voltar ao topo.
+
+Filtro Dinâmico (Single Page Application Feel): O uso de JavaScript para filtrar categorias na página principal sem recarregar o site deixa a navegação muito mais rápida.
+
+Menu Hamburguer: A navegação agora se adapta a telas pequenas escondendo os links atrás de um botão interativo, despoluindo a tela do celular.
+
+Layout em Grid Automático: Em vez de definir tamanhos fixos que quebram, o site usa grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)), o que faz os blocos de notícia se reorganizarem magicamente dependendo do tamanho da tela.
+
+2. Elementos Semânticos (HTML)
+A semântica ajuda o Google (SEO) a entender o seu site e leitores de tela a ajudarem pessoas com deficiência visual. Você utilizou:
+
+<header class="topo">: Indica o cabeçalho principal do site ou da página.
+
+<nav class="menu-nav">: Define a área de navegação (o menu principal).
+
+<section>: Agrupa conteúdos relacionados. Você separou logicamente a notícia de destaque (class="destaque") do grid de notícias secundárias (class="noticias").
+
+<footer>: Define o rodapé do documento, contendo informações de direitos autorais e links úteis.
+
+Atributos de Dados (data-categoria e data-filter): Usados de forma inteligente para armazenar informações no HTML que o JavaScript consegue ler para criar a lógica de filtros.
+
+Acessibilidade (aria-label, aria-current): O aria-label="Abrir Menu" no botão diz aos leitores de tela qual a função do botão que tem apenas o símbolo "☰". O aria-current="page" (via JS) indica qual página está ativa.
+
+3. Decisões de UI e UX
+UI (User Interface - O Visual):
+
+Paleta de Cores: Você usou tons escuros elegantes (Azul Marinho #1a1a2e e #0f3460) contrastando com um fundo claro (#f4f4f9) para não cansar a vista (Dark/Light balance). O Rosa/Vermelho vibrante (#e94560) atua perfeitamente como cor de destaque para chamar a atenção para botões, links ativos e detalhes.
+
+Tipografia Limpa: O uso da família Segoe UI (sans-serif) dá um ar moderno e jornalístico.
+
+Cards de Notícia: Uso de fundo branco, bordas arredondadas (border-radius: 8px) e uma sombra leve (box-shadow) para criar um efeito de "cartão" separando o conteúdo do fundo.
+
+UX (User Experience - A Experiência):
+
+Microinterações (Hover): Quando o usuário passa o mouse sobre uma notícia, o card sobe ligeiramente (transform: translateY(-5px)) e a sombra aumenta. Isso dá um feedback tátil virtual, mostrando que o elemento é clicável.
+
+Formulário de Contato Focado: Ao clicar para digitar no formulário, a borda muda de cor e ganha um brilho azulado (box-shadow e outline). Isso foca a atenção do usuário.
+
+Alinhamento de Botões (Flex-grow): No CSS, flex-grow: 1 no texto das notícias garante que, independentemente do tamanho do título, os cards fiquem alinhados e esteticamente agradáveis.
+
+4. Media Queries Implementadas (Responsividade)
+O site foi construído com a mentalidade de se adaptar a qualquer tela através das regras @media:
+
+Telas Médias / Tablets (max-width: 768px):
+
+As fontes do título e do texto diminuem levemente para não quebrar em várias linhas de forma feia.
+
+A imagem de destaque tem a altura máxima reduzida (max-height: 320px) para não ocupar a tela inteira do tablet.
+
+O menu tradicional ainda é exibido, mas com menos margens internas.
+
+Telas Pequenas / Celulares (max-width: 480px):
+
+A grande mudança de layout: O grid de notícias muda de colunas adaptáveis para uma única coluna (grid-template-columns: 1fr).
+
+Menu Hamburguer: O menu horizontal desaparece (display: none) e dá lugar ao botão "☰" (display: block). Quando clicado, a lista aparece empilhada na vertical (flex-direction: column).
+
+As margens laterais das section diminuem de 20px para 15px, aproveitando o máximo do espaço estreito do celular.
+
+O formulário de contato e o rodapé também se empilham em apenas uma coluna.
+
+5. Explicando o JavaScript (As Funções)
+Você possui dois blocos de JavaScript fazendo a mágica da interatividade:
+
+O Filtro de Categorias (script.js)
+Esta é uma função anônima auto-executável (() => { ... })() para não sujar o site com variáveis globais.
+
+Mapeamento: Ele pega todos os links do menu (.menuLink) e todos os cards de notícia (.artigo-noticia).
+
+setActiveLink(clicked): Quando você clica em um link (ex: Tecnologia), esta função remove a classe .ativo de todos os links e adiciona apenas naquele que você clicou, mudando a cor dele para rosa.
+
+applyFilter(filter): Ele olha a tag data-categoria de cada notícia. Se você clicou em "Tecnologia", ele esconde (classList.toggle('is-hidden')) todas as notícias que são de Esportes ou Economia.
+
+Ouvintes (addEventListener): Monitoram o clique. Ele possui uma regra vital: if (href.includes('contato.html')) return;. Isso permite que o filtro funcione na mesma página, mas se o usuário clicar em "Contato", o site carrega a página do formulário normalmente em vez de tentar filtrá-la.
+
+O Menu Hamburguer (no final do HTML)
+JavaScript
+const menuToggle = document.querySelector('.menu-toggle'); // Pega o botão
+const menu = document.querySelector('.menu'); // Pega a lista invisível
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('ativo'); // Liga e desliga a visibilidade
+});
+É uma função de gatilho simples. Como no CSS de celular a classe .menu.ativo tem display: flex !important, toda vez que o botão é clicado, o JS injeta essa classe e o menu "desce" na tela. Clicando de novo, ele tira a classe e o menu some.
