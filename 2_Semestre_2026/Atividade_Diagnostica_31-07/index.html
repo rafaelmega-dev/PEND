@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Rafael Mega | Portfólio</title>
+  <meta name="description" content="Portfólio pessoal de Rafael Mega, estudante de desenvolvimento de sistemas com interesse em back-end e bancos de dados.">
+
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', savedTheme || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container navbar">
+      <a href="#hero" class="logo" aria-label="Ir para o início">
+        <img src="assets/logo.jpg" alt="Logo de Rafael Leme Mega" class="site-logo">
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#interesses" class="nav-link">Interesses</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="photo-wrapper">
+          <img src="assets/perfil.png" alt="Foto de Rafael Leme Mega" class="profile-photo">
+          <span class="status-dot" title="Disponível para novas oportunidades">
+            <span class="visually-hidden">Disponível para novas oportunidades</span>
+          </span>
+        </div>
+
+        <h1 class="hero-title">Olá, eu sou <span class="highlight">Rafael Mega</span></h1>
+        <h2 class="hero-subtitle">Estudante de Desenvolvimento de Sistemas | Back-end | Banco de Dados</h2>
+        <p class="hero-tagline">Tenho 17 anos, estudo no <strong>SENAI</strong> e no <strong>SESI</strong>, trabalho como aprendiz na <strong>CPFL Energia</strong> e busco experiência prática em desenvolvimento de software.</p>
+
+        <div class="hero-actions">
+          <a href="#contato" class="btn btn-primary">Fale comigo</a>
+          <a href="#projetos" class="btn btn-secondary">Ver projetos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="container about-layout">
+        <div>
+          <h2 class="section-title">Sobre mim</h2>
+          <p class="about-text">Tenho 17 anos, estudo Desenvolvimento de Sistemas no <strong>SENAI</strong> e no <strong>SESI</strong>, e trabalho como aprendiz jovem na <strong>CPFL Energia</strong>. Sou apaixonado por back-end, bancos de dados e arquitetura de software, além de ter interesse por investimentos e educação financeira.</p>
+          <p class="about-text about-text-secondary">Busco oportunidades para crescer profissionalmente, ganhar experiência prática e construir uma carreira em tecnologia.</p>
+        </div>
+
+        <aside class="about-highlights" aria-label="Resumo pessoal">
+          <div class="highlight-card">
+            <strong>17 anos</strong>
+            <span>estudante, aprendiz e em constante evolução</span>
+          </div>
+          <div class="highlight-card">
+            <strong>Aprendiz jovem</strong>
+            <span>na <strong>CPFL Energia</strong></span>
+          </div>
+          <div class="highlight-card">
+            <strong>Objetivo</strong>
+            <span>crescer na área de tecnologia e desenvolver software de qualidade</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section interests" id="interesses">
+      <div class="container">
+        <h2 class="section-title">Interesses</h2>
+        <div class="interests-grid">
+          <article class="interest-card">
+            <span class="interest-icon" aria-hidden="true">🛠️</span>
+            <h3>Back-end</h3>
+            <p>Gosto de construir soluções robustas e com boa lógica de funcionamento.</p>
+          </article>
+          <article class="interest-card">
+            <span class="interest-icon" aria-hidden="true">🗄️</span>
+            <h3>Bancos de dados</h3>
+            <p>Tenho interesse por organização, modelagem e desempenho de dados.</p>
+          </article>
+          <article class="interest-card">
+            <span class="interest-icon" aria-hidden="true">🏗️</span>
+            <h3>Engenharia de software</h3>
+            <p>Busco aprender boas práticas e arquiteturas escaláveis.</p>
+          </article>
+          <article class="interest-card">
+            <span class="interest-icon" aria-hidden="true">💡</span>
+            <h3>Full stack</h3>
+            <p>Quero ampliar meus conhecimentos para desenvolver soluções completas.</p>
+          </article>
+          <article class="interest-card">
+            <span class="interest-icon" aria-hidden="true">📈</span>
+            <h3>Investimentos</h3>
+            <p>Tenho interesse por gestão de capital e crescimento financeiro.</p>
+          </article>
+          <article class="interest-card">
+            <span class="interest-icon" aria-hidden="true">🎓</span>
+            <h3>Educação financeira</h3>
+            <p>Valorizo aprendizado contínuo e hábitos financeiros responsáveis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projetos">
+      <div class="container">
+        <h2 class="section-title">Projetos</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-visual" aria-hidden="true">AQUA</div>
+            <h3 class="project-title">AquaFlow</h3>
+            <p class="project-description">Sistema inteligente para gestão de água com automação e monitoramento remoto de fluxo.</p>
+            <ul class="tech-list">
+              <li>Sistemas embarcados</li>
+              <li>Automação</li>
+              <li>Programação</li>
+              <li>IoT</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual" aria-hidden="true">GYM</div>
+            <h3 class="project-title">EleveOnGym</h3>
+            <p class="project-description">Protótipo de site para uma academia com páginas institucionais e loja online.</p>
+            <ul class="tech-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Design responsivo</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual" aria-hidden="true">ATEL</div>
+            <h3 class="project-title">AtelieTresAmores</h3>
+            <p class="project-description">Landing page voltada para aumentar vendas e direcionar clientes para o WhatsApp.</p>
+            <ul class="tech-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Landing page</li>
+            </ul>
+          </article>
+        </div>
+        <p class="about-text about-text-secondary">Também estou aberto a trabalhos freelance em sites de odontologia, escritórios de advocacia, landing pages e negócios.</p>
+      </div>
+    </section>
+
+    <section class="section experience" id="experiencia">
+      <div class="container">
+        <h2 class="section-title">Experiência</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-year">2025</span>
+            <div>
+              <h3>Início do curso</h3>
+              <p>Comecei o curso de Desenvolvimento de Sistemas no <strong>SENAI</strong>.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-year">2026</span>
+            <div>
+              <h3>Estudos e formação</h3>
+              <p>Estou cursando o 3º ano do Ensino Médio e o 4º semestre de Desenvolvimento de Sistemas, além de estudar no <strong>SESI</strong>.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-year">2026</span>
+            <div>
+              <h3>Aprendiz jovem</h3>
+              <p>Atuo como aprendiz jovem na <strong>CPFL Energia</strong>, com foco em desenvolvimento técnico e profissional.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-year">2027</span>
+            <div>
+              <h3>Objetivo futuro</h3>
+              <p>Planejo ingressar na universidade para estudar Engenharia de Software ou Ciência da Computação em <strong>USP</strong>, <strong>UFSCar</strong>, <strong>UNESP</strong>, <strong>UNIFAL</strong> ou <strong>UNIFAE</strong>.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section achievements" id="conquistas">
+      <div class="container">
+        <h2 class="section-title">Conquistas</h2>
+        <div class="achievements-grid">
+          <article class="achievement-card">
+            <h3>🥇 Medalha de ouro</h3>
+            <p>Competição Kangaroo Mathematics</p>
+          </article>
+          <article class="achievement-card">
+            <h3>🥇 Medalha de ouro</h3>
+            <p>OBA — Olimpíada Brasileira de Astronomia</p>
+          </article>
+          <article class="achievement-card">
+            <h3>🥈 Medalha de prata</h3>
+            <p>LIGMAT — Matemática</p>
+          </article>
+        </div>
+        <p class="about-text about-text-secondary">Também participei de outras olimpíadas acadêmicas, como ONC, OLP e ONHB.</p>
+      </div>
+    </section>
+
+    <section class="section skills" id="habilidades">
+      <div class="container">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Programação</h3>
+            <ul class="tech-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>Back-end</li>
+              <li>Bancos de dados</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Competências</h3>
+            <ul class="tech-list">
+              <li>Resolução de problemas</li>
+              <li>Raciocínio lógico</li>
+              <li>Trabalho em equipe</li>
+              <li>Aprendizado contínuo</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Interesses</h3>
+            <ul class="tech-list">
+              <li>Educação financeira</li>
+              <li>Investimentos</li>
+              <li>Gestão de capital</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Fortalezas</h3>
+            <ul class="tech-list">
+              <li>Matemática</li>
+              <li>Raciocínio lógico</li>
+              <li>Aprendizado rápido</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Área para melhorar</h3>
+            <ul class="tech-list">
+              <li>Inglês</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato">
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <h2 class="section-title">Contato</h2>
+          <p>Estou aberto a oportunidades de estágio, projetos freelance, sites, landing pages e desenvolvimento de software. Empresas e clientes podem entrar em contato.</p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> rafaelmega@gmail.com</li>
+            <li><strong>Localização:</strong> Mococa - SP</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error">
+            <p class="form-error" id="name-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+            <p class="form-error" id="email-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <input id="subject" name="subject" type="text" aria-describedby="subject-error">
+            <p class="form-error" id="subject-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" aria-describedby="message-error"></textarea>
+            <p class="form-error" id="message-error"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+          <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <h2 class="footer-title">Vamos construir algo incrível?</h2>
+      <p class="footer-text">Sinta-se à vontade para entrar em contato e compartilhar ideias.</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.1.82-.26.82-.58v-2.02c-3.34.72-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.08-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3Z"/></svg>
+        </a>
+        <a href="mailto:ana.souza@exemplo.com" aria-label="E-mail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 6 10 7L22 6"></path></svg>
+        </a>
+      </div>
+
+      <p class="copyright">&copy; <span id="year"></span> Rafael Leme Mega. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
