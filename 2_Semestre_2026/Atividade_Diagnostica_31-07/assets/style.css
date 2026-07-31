@@ -1,0 +1,196 @@
+/* --- Variáveis de Cor e Reset --- */
+:root {
+    --bg-color: #f9fafb;
+    --text-color: #1f2937;
+    --text-light: #4b5563;
+    --primary-color: #2563eb;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+}
+
+/* Variáveis para o Modo Escuro */
+body.dark-mode {
+    --bg-color: #111827;
+    --text-color: #f9fafb;
+    --text-light: #d1d5db;
+    --card-bg: #1f2937;
+    --border-color: #374151;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Navegação --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-right: 1.5rem;
+}
+
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-family: inherit;
+    font-weight: 600;
+}
+
+/* --- Layout Principal --- */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    text-align: center;
+    padding: 6rem 0 4rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--primary-color);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* --- Habilidades --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* --- Projetos --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h4 {
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* --- Rodapé --- */
+footer {
+    text-align: center;
+    padding: 4rem 5%;
+    background-color: var(--card-bg);
+    margin-top: 2rem;
+}
+
+.social-links {
+    margin: 1.5rem 0;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+}
+
+.copyright {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
