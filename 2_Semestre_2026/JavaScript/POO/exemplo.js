@@ -16,7 +16,7 @@ class Carro {
         this.ano = ano;
         this.cor = cor;
     }
-
+         
     //Métodos- são as ações que o objeto pode realizar
     ligar() {
         console.log("O carro está ligado");
