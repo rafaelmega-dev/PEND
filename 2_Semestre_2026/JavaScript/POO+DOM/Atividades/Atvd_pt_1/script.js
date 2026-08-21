@@ -29,17 +29,21 @@ class Estoque {
 
         resultado.innerHTML = ""
 
-        this.produtos.forEach(produto => {
-
+        this.produtos.forEach((produto, index) => {
             resultado.innerHTML += `
             <div>
-                <p>Nome: ${produto.nome}</p>
+                <p>Nome:${produto.nome}</p>
                 <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
                 <p>Categoria: ${produto.categoria}</p>
-                <p>Desconto: ${produto.desconto}%</p>
+                <p>Desconto:${produto.desconto}%</p>
+                <button onclick="estoque.excluirProduto(${index})">Excluir</button>
             </div>
-        `;
+            `;
         })
+    }
+    excluirProduto(indice) {
+        this.produtos.splice(indice, 1);
+        this.exibir();
     }
 }
 
@@ -49,7 +53,7 @@ const preco = document.querySelector("#preco");
 const categoria = document.querySelector("#categoria");
 const desconto = document.querySelector("#desconto");
 const botaoCadastrar = document.querySelector("#botaoCadastrar");
-
+const botaoExcluir = document.querySelector("#botaoExcluir");
 
 botaoCadastrar.addEventListener("click", function() {
 
@@ -60,4 +64,5 @@ botaoCadastrar.addEventListener("click", function() {
     estoque.exibir();
         
 });
+
 
