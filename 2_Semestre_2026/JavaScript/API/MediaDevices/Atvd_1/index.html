@@ -1,0 +1,705 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidade Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topo">
+    <div class="topo-conteudo">
+
+        <div class="marca">
+            <div class="marca-simbolo">ID</div>
+
+            <div>
+                <strong>Identidade Digital</strong>
+                <span>Cadastro e validação de identidade</span>
+            </div>
+        </div>
+
+        <div class="seguranca">
+            <span class="status-seguranca"></span>
+            Ambiente seguro
+        </div>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+    <section class="cabecalho-pagina">
+
+        <span class="etiqueta">
+            IDENTIDADE DIGITAL
+        </span>
+
+        <h1>Cadastro e validação de identidade</h1>
+
+        <p>
+            Registre sua identidade digital ou consulte
+            um cadastro utilizando reconhecimento facial.
+        </p>
+
+    </section>
+
+
+    <!-- MENU PRINCIPAL -->
+
+    <div class="seletor-modo">
+
+        <button
+            class="modo ativo"
+            id="btnModoCadastro"
+        >
+            <strong>Novo cadastro</strong>
+            <span>Registrar uma nova identidade</span>
+        </button>
+
+        <button
+            class="modo"
+            id="btnModoConsulta"
+        >
+            <strong>Consultar identidade</strong>
+            <span>Acessar cadastro pela face</span>
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         CADASTRO
+    ====================================================== -->
+
+    <section id="areaCadastro">
+
+        <nav class="etapas">
+
+            <div class="etapa ativa" id="etapa1">
+
+                <span>1</span>
+
+                <div>
+                    <strong>Dados pessoais</strong>
+                    <small>Informações básicas</small>
+                </div>
+
+            </div>
+
+            <div class="linha-etapa"></div>
+
+            <div class="etapa" id="etapa2">
+
+                <span>2</span>
+
+                <div>
+                    <strong>Imagem facial</strong>
+                    <small>Captura da face</small>
+                </div>
+
+            </div>
+
+            <div class="linha-etapa"></div>
+
+            <div class="etapa" id="etapa3">
+
+                <span>3</span>
+
+                <div>
+                    <strong>Prova de presença</strong>
+                    <small>Validação por voz</small>
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <section class="painel">
+
+            <!-- DADOS -->
+
+            <div class="secao" id="dadosPessoais">
+
+                <div class="secao-titulo">
+
+                    <div class="numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <span>IDENTIFICAÇÃO</span>
+
+                        <h2>Seus dados pessoais</h2>
+
+                        <p>
+                            Informe os dados utilizados para identificar seu cadastro.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="formulario">
+
+                    <div class="campo">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder="Digite seu nome completo"
+                            autocomplete="name"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="seuemail@exemplo.com"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+
+                    <div class="campo campo-localizacao">
+
+                        <div class="label-localizacao">
+
+                            <label>
+                                Localização
+                            </label>
+
+                            <span id="statusLocalizacao">
+                                Aguardando localização...
+                            </span>
+
+                        </div>
+
+
+                        <div class="localizacao-box">
+
+                            <span class="icone-localizacao">
+                                ⌖
+                            </span>
+
+                            <div>
+
+                                <strong id="endereco">
+                                    Localização não identificada
+                                </strong>
+
+                                <small id="coordenadas">
+                                    A localização será obtida automaticamente.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acao-secao">
+
+                    <button
+                        class="botao principal"
+                        id="btnContinuar"
+                    >
+                        Continuar
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAPTURA FACIAL -->
+
+            <div
+                class="secao escondida"
+                id="capturaFacial"
+            >
+
+                <div class="secao-titulo">
+
+                    <div class="numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <span>BIOMETRIA FACIAL</span>
+
+                        <h2>Registre sua imagem facial</h2>
+
+                        <p>
+                            Posicione seu rosto no centro da área indicada
+                            e mantenha-se imóvel durante a captura.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="biometria">
+
+                    <div class="camera-container">
+
+                        <video
+                            id="webcam"
+                            autoplay
+                            playsinline
+                            muted
+                        ></video>
+
+                        <canvas
+                            id="canvasOverlay"
+                        ></canvas>
+
+                        <div class="camera-guia"></div>
+
+                        <div
+                            class="camera-status"
+                            id="cameraStatus"
+                        >
+                            Posicione seu rosto no centro
+                        </div>
+
+                    </div>
+
+
+                    <div class="biometria-info">
+
+                        <div class="info-item">
+
+                            <span>01</span>
+
+                            <div>
+                                <strong>Olhe para a câmera</strong>
+
+                                <p>
+                                    Utilize um ambiente bem iluminado.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>02</span>
+
+                            <div>
+
+                                <strong>
+                                    Mantenha o rosto centralizado
+                                </strong>
+
+                                <p>
+                                    Evite objetos cobrindo a face.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>03</span>
+
+                            <div>
+
+                                <strong>
+                                    Capture sua imagem
+                                </strong>
+
+                                <p>
+                                    A imagem será utilizada para sua identificação.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="botao principal largura-total"
+                            id="btnRegistrar"
+                        >
+                            Registrar imagem facial
+                        </button>
+
+
+                        <button
+                            class="botao secundario largura-total"
+                            id="btnLimpar"
+                        >
+                            Limpar registros
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROVA DE PRESENÇA -->
+
+                <div class="validacao-presenca">
+
+                    <div class="presenca-cabecalho">
+
+                        <div class="presenca-numero">
+                            03
+                        </div>
+
+                        <div>
+
+                            <span>PROVA DE PRESENÇA</span>
+
+                            <h2>
+                                Confirme que você está presente
+                            </h2>
+
+                            <p>
+                                Para concluir o cadastro, diga em voz alta
+                                a frase exibida abaixo.
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="microfone-status"
+                            id="microfoneStatus"
+                        >
+                            <span></span>
+                            Microfone
+                        </div>
+
+                    </div>
+
+
+                    <div class="frase-container">
+
+                        <div class="frase-label">
+                            FRASE DE VERIFICAÇÃO
+                        </div>
+
+                        <div
+                            class="frase"
+                            id="fraseCaptcha"
+                        >
+                            Preparando frase...
+                        </div>
+
+                        <div class="frase-ajuda">
+                            Leia exatamente a frase apresentada.
+                        </div>
+
+                    </div>
+
+
+                    <div class="voz-controles">
+
+                        <button
+                            type="button"
+                            class="botao secundario"
+                            id="btnNovaFrase"
+                        >
+                            Nova frase
+                        </button>
+
+                        <button
+                            type="button"
+                            class="botao principal"
+                            id="btnMicrofone"
+                        >
+                            <span class="icone-microfone">●</span>
+                            Iniciar validação
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="resultado-voz"
+                        id="captchaResultado"
+                    >
+                        A validação por voz é necessária
+                        para concluir o cadastro.
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="mensagem-status"
+                    id="status"
+                ></div>
+
+            </div>
+
+
+            <!-- CONCLUSÃO -->
+
+            <div
+                class="secao escondida conclusao"
+                id="conclusao"
+            >
+
+                <div class="conclusao-icone">
+                    ✓
+                </div>
+
+                <span>
+                    CADASTRO CONCLUÍDO
+                </span>
+
+                <h2>
+                    Identidade registrada com sucesso
+                </h2>
+
+                <p>
+                    Seus dados, imagem facial e prova de presença
+                    foram validados corretamente.
+                </p>
+
+
+                <div class="resumo-cadastro">
+
+                    <div>
+                        <span>Nome</span>
+                        <strong id="resumoNome">—</strong>
+                    </div>
+
+                    <div>
+                        <span>E-mail</span>
+                        <strong id="resumoEmail">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Localização</span>
+                        <strong id="resumoLocalizacao">—</strong>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="botao principal"
+                    id="btnNovoCadastro"
+                >
+                    Novo cadastro
+                </button>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONSULTA POR BIOMETRIA
+    ====================================================== -->
+
+    <section
+        id="areaConsulta"
+        class="consulta escondida"
+    >
+
+        <div class="consulta-cabecalho">
+
+            <span class="etiqueta">
+                CONSULTA BIOMÉTRICA
+            </span>
+
+            <h2>
+                Acesse sua identidade pela face
+            </h2>
+
+            <p>
+                Posicione seu rosto diante da câmera.
+                O sistema irá comparar a imagem capturada
+                com as identidades registradas neste dispositivo.
+            </p>
+
+        </div>
+
+
+        <div class="consulta-grid">
+
+            <div class="consulta-camera">
+
+                <div class="camera-container">
+
+                    <video
+                        id="webcamConsulta"
+                        autoplay
+                        playsinline
+                        muted
+                    ></video>
+
+                    <canvas
+                        id="canvasConsulta"
+                    ></canvas>
+
+                    <div class="camera-guia"></div>
+
+                    <div
+                        class="camera-status"
+                        id="consultaCameraStatus"
+                    >
+                        Câmera aguardando
+                    </div>
+
+                </div>
+
+
+                <div class="consulta-acoes">
+
+                    <button
+                        class="botao principal"
+                        id="btnIniciarConsulta"
+                    >
+                        Ativar câmera
+                    </button>
+
+                    <button
+                        class="botao secundario"
+                        id="btnConsultar"
+                    >
+                        Consultar minha identidade
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+
+            <div class="resultado-consulta">
+
+                <div class="resultado-titulo">
+
+                    <span>
+                        RESULTADO DA CONSULTA
+                    </span>
+
+                    <strong id="statusConsulta">
+                        Aguardando reconhecimento
+                    </strong>
+
+                </div>
+
+
+                <div
+                    id="dadosConsulta"
+                    class="dados-consulta"
+                >
+
+                    <div class="resultado-vazio">
+
+                        <div class="resultado-vazio-icone">
+                            ID
+                        </div>
+
+                        <strong>
+                            Nenhuma identidade consultada
+                        </strong>
+
+                        <p>
+                            Ative a câmera e realize uma
+                            consulta facial para acessar
+                            seu cadastro.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REGISTROS -->
+
+    <section class="registros">
+
+        <div class="registros-cabecalho">
+
+            <div>
+
+                <span>BASE LOCAL</span>
+
+                <h2>
+                    Identidades registradas
+                </h2>
+
+            </div>
+
+            <span id="contadorRegistros">
+                0 registros
+            </span>
+
+        </div>
+
+
+        <div
+            id="listaRostos"
+            class="lista-registros"
+        >
+            Nenhuma identidade registrada.
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Identidade Digital • Sistema de validação
+    </p>
+
+    <span>
+        Seus dados são processados neste dispositivo.
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
