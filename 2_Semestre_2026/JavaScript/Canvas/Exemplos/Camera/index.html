@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câmera API</title>
+    <style>
+        #camera {
+            transform: scaleX(-1); 
+        }
+        #foto {
+            transform: scaleX(-1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Câmera API</h1>
+    <video id="camera" autoplay style="width: 200px"></video>
+    <canvas id="canvas" style="display: none;"></canvas>
+    
+    <br>
+    <button id="botao">Tirar foto</button>
+
+    <h3>Sua Foto:</h3>
+    <img id="foto" alt="Sua foto aparecerá aqui">
+
+    <script src="script.js"></script>
+</body>
+</html>

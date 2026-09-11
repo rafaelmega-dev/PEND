@@ -1,0 +1,13 @@
+#camera, #foto {
+    transform: scaleX(-1);
+}
+
+.resultado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#foto {
+    width: 150px;
+}
