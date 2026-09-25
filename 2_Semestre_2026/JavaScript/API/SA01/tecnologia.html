@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsToday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo_trial.png" type="image/png">
+</head>
+
+<body>
+    <header class="topo">
+        <h1>NewsToday</h1>
+        <p>As últimas notícias do Brasil e do mundo</p>
+    </header>
+
+    <nav class="menu-nav">
+    <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+
+        <ul class="menu">
+            <li><a href="index.html" class="menuLink ativo" data-filter="todas">Início</a></li>
+            <li><a href="tecnologia.html" class="menuLink" data-filter="tecnologia">Tecnologia</a></li>
+            <li><a href="esportes.html" class="menuLink" data-filter="esportes">Esportes</a></li>
+            <li><a href="economia.html" class="menuLink" data-filter="economia">Economia</a></li>
+            <li><a href="contato.html" class="menuLink">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section class="destaque artigo-noticia" data-categoria="tecnologia">
+        <h2>Notícia em destaque</h2>
+
+        <div class="noticia-destaque">
+            <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Inteligência Artificial na Medicina">
+
+            <h2>Nova inteligência artificial promete revolucionar diagnósticos médicos precoces</h2>
+
+            <p>
+                Desenvolvida em parceria entre grandes big techs e universidades, a nova IA demonstrou uma precisão de 98% na detecção de doenças complexas anos antes dos primeiros sintomas aparecerem. O modelo de aprendizado profundo processa milhares de exames em segundos, marcando um novo capítulo na medicina preventiva global.
+            </p>
+        </div>
+    </section>
+
+    <section class="noticias">
+        
+        <div class="noticia artigo-noticia" data-categoria="tecnologia">
+            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Óculos de Realidade Virtual">
+            <h2>Lançamento do novo óculos de realidade mista agita o mercado</h2>
+            <p>
+                Com design mais leve e bateria de longa duração, a nova geração de óculos promete popularizar de vez a computação espacial e as aplicações de realidade aumentada no ambiente de trabalho corporativo.
+            </p>
+        </div>
+
+        <div class="noticia artigo-noticia" data-categoria="tecnologia">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Placa de circuito">
+            <h2>Chips de 2 nanômetros entram em produção em larga escala</h2>
+            <p>
+                A nova arquitetura de processadores garantirá smartphones e computadores até 40% mais rápidos e consumindo significativamente menos energia, quebrando novos recordes na indústria de semicondutores.
+            </p>
+        </div>
+
+        <div class="noticia artigo-noticia" data-categoria="tecnologia">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dados e Redes">
+            <h2>União Europeia aprova nova lei de proteção de dados para IA</h2>
+            <p>
+                A regulamentação pioneira visa garantir a transparência nos algoritmos e proteger a privacidade dos usuários contra o uso indiscriminado de dados por sistemas automatizados de aprendizado de máquina.
+            </p>
+        </div>
+
+        <div class="noticia artigo-noticia" data-categoria="tecnologia">
+            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Carro elétrico carregando">
+            <h2>Baterias de estado sólido chegam aos primeiros carros elétricos</h2>
+            <p>
+                A tecnologia tão aguardada finalmente chega ao mercado automotivo, permitindo recargas completas em menos de 10 minutos e autonomia que ultrapassa os 1.000 quilômetros por carga.
+            </p>
+        </div>
+
+        <div class="noticia artigo-noticia" data-categoria="tecnologia">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Código de programação e segurança">
+            <h2>Novo protocolo quântico bloqueia ataques cibernéticos</h2>
+            <p>
+                Pesquisadores anunciaram a criação de um escudo criptográfico impenetrável baseado em física quântica, essencial para proteger infraestruturas críticas contra a próxima geração de hackers.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contato" class="rodape">
+        <div class="rodape-container">
+            <div class="rodape-coluna">
+                <h3>NewsToday</h3>
+                <p>O seu portal diário de informações com credibilidade e agilidade. Acompanhe as novidades do Brasil e do mundo.</p>
+            </div>
+            
+            <div class="rodape-coluna">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tecnologia.html">Tecnologia</a></li>
+                    <li><a href="esportes.html">Esportes</a></li>
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Siga-nos</h3>
+                <div class="redes-sociais">
+                    <div class="icones"></div>
+                    <a href="#">
+                        <img src="assets/facebook.png" alt="Facebook" class="icone-facebook">
+                    </a>
+                    <a href="#">
+                        <img src="assets/whatsapp.png" alt="WhatsApp" class="icone-whatsapp">
+                    </a>
+                    <a href="#">
+                        <img src="assets/instagram.svg" alt="Instagram" class="icone-instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="rodape-direitos">
+            <p>NewsToday © 2026 - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
