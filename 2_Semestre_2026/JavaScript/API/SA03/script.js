@@ -17,7 +17,6 @@ async function carregarNoticias() {
     if (noticiasContainer) noticiasContainer.innerHTML = '';
 
     try {
-        // A GNews API funciona direto no JS do navegador sem precisar de Proxy
         const url = `https://gnews.io/api/v4/top-headlines?category=${cat}&lang=pt&country=br&max=7&apikey=${API_KEY}`;
         
         const resposta = await fetch(url);
