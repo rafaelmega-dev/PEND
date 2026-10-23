@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Finalizar Compra - Nike" />
+    <meta name="author" content="Nike Custom Template" />
+    <title>Pagamento Seguro · Nike</title>
+
+    <!-- Correção do link do CSS: substituindo os caminhos relativos quebrados pela CDN oficial -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    
+    <meta name="theme-color" content="#111111" />
+    <style>
+      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow:
+          inset 0 0.5em 1.5em #0000001a,
+          inset 0 0.125em 0.5em #00000026;
+      }
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .btn-bd-primary {
+        --bd-violet-bg: #111;
+        --bd-violet-rgb: 17, 17, 17;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #333;
+        --bs-btn-hover-border-color: #333;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #000;
+        --bs-btn-active-border-color: #000;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+      .container {
+        max-width: 960px;
+      }
+      .btn-primary {
+        background-color: #111;
+        border-color: #111;
+        border-radius: 30px;
+        font-weight: bold;
+      }
+      .btn-primary:hover {
+        background-color: #333;
+        border-color: #333;
+      }
+      .btn-secondary {
+        background-color: #555;
+        border-color: #555;
+      }
+      .text-primary {
+        color: #111 !important;
+      }
+      .bg-primary {
+        background-color: #111 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-body-tertiary">
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <a href="index.html" class="d-inline-block text-dark mb-4">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=thumbnail" class="bi me-2" width="60" height="40" alt="Nike" style="object-fit: contain;">
+          </a>
+          <h1 class="h2 fw-bold text-dark">Finalizar Compra</h1>
+          <p class="lead text-muted">
+            Preencha as informações abaixo de forma rápida e segura para garantir seus produtos Nike.
+          </p>
+        </div>
+        <div class="row g-5">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-primary fw-bold">Seu carrinho</span>
+              <span class="badge bg-primary rounded-pill">3</span>
+            </h4>
+            <ul class="list-group mb-3 shadow-sm">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0 fw-bold">Nike Air Force 1</h6>
+                  <small class="text-body-secondary">Branco, Tamanho 41</small>
+                </div>
+                <span class="text-body-secondary">R$ 799,99</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0 fw-bold">Camiseta Nike Dri-FIT</h6>
+                  <small class="text-body-secondary">Preta, Tamanho M</small>
+                </div>
+                <span class="text-body-secondary">R$ 149,99</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0 fw-bold">Meia Cano Alto Nike</h6>
+                  <small class="text-body-secondary">Branca, Kit com 3</small>
+                </div>
+                <span class="text-body-secondary">R$ 59,99</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                <div class="text-success">
+                  <h6 class="my-0 fw-bold">Código Promocional</h6>
+                  <small>NIKE10</small>
+                </div>
+                <span class="text-success">−R$ 100,99</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total (BRL)</span> <strong class="fs-5">R$ 908,98</strong>
+              </li>
+            </ul>
+            <form class="card p-2 shadow-sm border-0">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Código de desconto" />
+                <button type="submit" class="btn btn-dark">Aplicar</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3 fw-bold">Endereço de Faturamento</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required />
+                  <div class="invalid-feedback">O nome é obrigatório.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Sobrenome</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required />
+                  <div class="invalid-feedback">O sobrenome é obrigatório.</div>
+                </div>
+                <div class="col-12">
+                  <label for="username" class="form-label">Nome de usuário</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" id="username" placeholder="Nome de usuário" required />
+                    <div class="invalid-feedback">Seu nome de usuário é obrigatório.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">E-mail <span class="text-body-secondary">(Opcional)</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="voce@exemplo.com" />
+                  <div class="invalid-feedback">Insira um endereço de e-mail válido para atualizações de entrega.</div>
+                </div>
+                <div class="col-12">
+                  <label for="address" class="form-label">Endereço</label>
+                  <input type="text" class="form-control" id="address" placeholder="Av. Paulista, 1234" required />
+                  <div class="invalid-feedback">Por favor, insira o seu endereço de entrega.</div>
+                </div>
+                <div class="col-12">
+                  <label for="address2" class="form-label">Complemento <span class="text-body-secondary">(Opcional)</span></label>
+                  <input type="text" class="form-control" id="address2" placeholder="Apartamento, bloco ou sala" />
+                </div>
+                <div class="col-md-5">
+                  <label for="country" class="form-label">País</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Escolha...</option>
+                    <option>Brasil</option>
+                  </select>
+                  <div class="invalid-feedback">Selecione um país válido.</div>
+                </div>
+                <div class="col-md-4">
+                  <label for="state" class="form-label">Estado</label>
+                  <select class="form-select" id="state" required>
+                    <option value="">Escolha...</option>
+                    <option>São Paulo</option>
+                    <option>Rio de Janeiro</option>
+                    <option>Minas Gerais</option>
+                  </select>
+                  <div class="invalid-feedback">Selecione um estado válido.</div>
+                </div>
+                <div class="col-md-3">
+                  <label for="zip" class="form-label">CEP</label>
+                  <input type="text" class="form-control" id="zip" placeholder="" required />
+                  <div class="invalid-feedback">O CEP é obrigatório.</div>
+                </div>
+              </div>
+              <hr class="my-4" />
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="same-address" />
+                <label class="form-check-label" for="same-address">O endereço de entrega é o mesmo de faturamento</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info" />
+                <label class="form-check-label" for="save-info">Salvar estas informações para a próxima compra</label>
+              </div>
+              <hr class="my-4" />
+              <h4 class="mb-3 fw-bold">Pagamento</h4>
+              <div class="my-3">
+                <div class="form-check">
+                  <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required />
+                  <label class="form-check-label" for="credit">Cartão de crédito</label>
+                </div>
+                <div class="form-check">
+                  <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required />
+                  <label class="form-check-label" for="debit">Cartão de débito</label>
+                </div>
+                <div class="form-check">
+                  <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required />
+                  <label class="form-check-label" for="paypal">PayPal</label>
+                </div>
+              </div>
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Nome no cartão</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required />
+                  <small class="text-body-secondary">Nome completo como exibido no cartão</small>
+                  <div class="invalid-feedback">O nome no cartão é obrigatório.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cc-number" class="form-label">Número do cartão</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" required />
+                  <div class="invalid-feedback">O número do cartão de crédito é obrigatório.</div>
+                </div>
+                <div class="col-md-3">
+                  <label for="cc-expiration" class="form-label">Validade</label>
+                  <input type="text" class="form-control" id="cc-expiration" placeholder="MM/AA" required />
+                  <div class="invalid-feedback">A data de validade é obrigatória.</div>
+                </div>
+                <div class="col-md-3">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required />
+                  <div class="invalid-feedback">O código de segurança (CVV) é obrigatório.</div>
+                </div>
+              </div>
+              <hr class="my-4" />
+              <button class="w-100 btn btn-primary btn-lg" type="submit">
+                Concluir Pagamento
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+        <p class="mb-1">&copy; 2017–2025 Nike, Inc. Todos os direitos reservados.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#" class="text-muted text-decoration-none">Privacidade</a></li>
+          <li class="list-inline-item"><a href="#" class="text-muted text-decoration-none">Termos de Uso</a></li>
+          <li class="list-inline-item"><a href="#" class="text-muted text-decoration-none">Suporte</a></li>
+        </ul>
+      </footer>
+    </div>
+    
+    <!-- Correção do link do JavaScript para CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="checkout.js" class="astro-vvvwv3sm"></script>
+  </body>
+</html>
